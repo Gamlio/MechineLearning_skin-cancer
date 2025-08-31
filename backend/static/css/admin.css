@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.header {
+  /* Bố cục và Khoảng cách */
+  width: 100%;
+  padding: 20px 40px; /* Thêm padding ngang để nội dung không bị dính vào lề */
+  
+  /* Thiết kế */
+  background-color: #fff;
+  color: #333; /* Màu chữ tối */
+  border-radius: 12px;
+  
+  /* Hiệu ứng */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Hiệu ứng đổ bóng mượt mà hơn */
+  transition: box-shadow 0.3s ease; /* Thêm hiệu ứng chuyển động khi có thay đổi */
+}
+
+/* Hiệu ứng khi di chuột vào (tùy chọn) */
+.header:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Hiệu ứng đổ bóng đậm hơn khi di chuột vào */
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Tăng min-width để các card rộng rãi hơn */
+  gap: 25px; /* Tăng khoảng cách giữa các card */
+  margin-bottom: 30px; /* Tăng khoảng cách dưới cùng */
+}
+
+/* Định dạng card chuyên nghiệp hơn */
+.card {
+  background-color: #ffffff;
+  padding: 24px; /* Tăng padding để có thêm không gian trống */
+  border-radius: 16px; /* Bo góc mềm mại hơn */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* Hiệu ứng đổ bóng mượt mà, tinh tế */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng chuyển động */
+  overflow: hidden; /* Tránh tràn nội dung */
+}
+
+/* Hiệu ứng khi di chuột vào card */
+.card:hover {
+  transform: translateY(-5px); /* Nâng nhẹ card lên */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Đổ bóng đậm hơn */
+}
+
+/* Định dạng tiêu đề card */
+.card h2 {
+  margin-top: 0;
+  color: #2c3e50; /* Màu chữ xanh than, chuyên nghiệp hơn */
+  font-size: 1.4rem; /* Kích thước chữ lớn hơn */
+  font-weight: 600; /* In đậm vừa phải */
+  border-bottom: 1px solid #e9ecef; /* Viền mỏng, nhẹ nhàng */
+  padding-bottom: 15px; /* Tăng khoảng cách dưới viền */
+  margin-bottom: 15px;
+}
+
+/* Định dạng bảng dữ liệu */
+.data-table,
+.confusion-matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.data-table th,
+.data-table td,
+.confusion-matrix-table th,
+.confusion-matrix-table td {
+  padding: 14px; /* Tăng padding để nội dung không bị dính vào viền */
+  border: 1px solid #e0e0e0; /* Viền màu xám nhạt hơn */
+  text-align: left;
+}
+
+.data-table th,
+.confusion-matrix-table th {
+  background-color: #f8f9fa; /* Màu nền xám nhạt hơn */
+  font-weight: 600; /* Độ đậm vừa phải */
+  color: #495057;
+}
+
+/* Làm cho các hàng chẵn và lẻ có màu khác nhau để dễ nhìn */
+.data-table tbody tr:nth-child(even) {
+  background-color: #fbfbfb;
+}
+
+.data-table tbody tr:hover {
+  background-color: #e9ecef; /* Hiệu ứng hover cho hàng */
+  cursor: pointer;
+}
+.pagination {
+  display: flex; /* Dùng Flexbox để căn giữa dễ dàng hơn */
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  font-family: Arial, sans-serif; /* Chọn font chữ chuyên nghiệp */
+}
+
+.pagination button {
+  padding: 10px 18px;
+  margin: 0 4px;
+  background-color: transparent; /* Nền trong suốt */
+  color: #333; /* Màu chữ tối hơn */
+  border: 1px solid #ddd; /* Viền mỏng, nhẹ nhàng */
+  border-radius: 6px; /* Bo góc mềm mại hơn */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Thêm hiệu ứng chuyển động */
+  font-size: 14px;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #f0f0f0; /* Hiệu ứng hover nhẹ nhàng */
+  border-color: #aaa;
+}
+
+.pagination button:disabled {
+  color: #ccc;
+  border-color: #e9e9e9;
+  cursor: not-allowed;
+}
+
+.pagination .current-page {
+  padding: 10px 18px;
+  margin: 0 4px;
+  font-weight: bold;
+  background-color: #007bff; /* Màu nền nổi bật cho trang hiện tại */
+  color: #fff;
+  border-radius: 6px;
+  border: 1px solid #007bff;
+}
+
+.pagination span {
+  margin: 0 10px;
+  font-size: 14px;
+  color: #555;
+}
+footer {
+  /* Thiết lập vị trí và kích thước */
+  width: 100%;
+  padding: 20px 0; /* Khoảng đệm trên dưới */
+  text-align: center; /* Căn giữa nội dung */
+  
+  /* Màu sắc và font chữ */
+  background-color: #333; /* Màu nền tối */
+  color: #f4f4f4; /* Màu chữ sáng, dễ đọc trên nền tối */
+  font-family: Arial, sans-serif; /* Font chữ phổ biến, dễ đọc */
+  font-size: 14px;
+  line-height: 1.5;
+  
+  /* Hiệu ứng (tùy chọn) */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng bóng mờ nhẹ phía trên */
+}
+
+footer p {
+  margin: 0; /* Xóa khoảng lề mặc định của thẻ <p> */
+}

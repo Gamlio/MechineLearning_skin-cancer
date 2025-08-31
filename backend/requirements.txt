@@ -1,0 +1,9 @@
+Flask
+Flask-CORS
+torch
+torchvision
+Pillow
+numpy
+psycopg2-binary
+efficientnet-pytorch
+python-dotenv

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Bảng Điều Khiển{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1.2em 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-weight: 700;
+        }
+        main {
+            padding: 2em;
+            max-width: 1400px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        footer {
+            text-align: center;
+            padding: 1.5em;
+            background-color: #2c3e50;
+            color: white;
+            margin-top: 40px;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <header>
+        <h1>{% block header_content %}Ứng dụng Phân loại Ung thư Da{% endblock %}</h1>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 - Dự án Phân loại Ung thư Da | Phát triển tại Thái Nguyên, Việt Nam</p>
+    </footer>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

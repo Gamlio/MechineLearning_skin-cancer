@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Bảng Điều Khiển Quản Lý{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <header>
+        <h1>{% block header_content %}Bảng Điều Khiển Quản Lý Mô Hình{% endblock %}</h1>
+    </header>
+    <main>
+        <div class="dashboard-grid">
+            <section class="card">
+                <h2>Bảng Yêu Cầu Gần Đây</h2>
+                <div id="requests-table-container" class="table-responsive">
+                    <table id="requestsTable" class="data-table">
+                        <thead>
+                            <tr>
+                                <th>IP</th>
+                                <th>Thời gian</th>
+                                <th>Tên ảnh</th>
+                                <th>Dự đoán</th>
+                                <th>Độ tin cậy</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+        <div class="dashboard-grid">
+            <section class="card">
+                <h2>Bảng Phản hồi Sai</h2>
+                <div id="feedback-table-container" class="table-responsive">
+                    <table id="feedbackTable" class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Thời gian</th>
+                                <th>Ảnh</th>
+                                <th>Nhãn Đúng</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 WebsiteHM. Nhóm 9 CNNTT K21B.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+</body>
+</html>
